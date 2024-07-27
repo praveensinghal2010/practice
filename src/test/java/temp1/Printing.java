@@ -1,25 +1,20 @@
-package driverfactory;
+package temp1;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import utils.ConfigLoader;
 
-public class DriverFactory {
+public class Printing {
 
-	
-	public static WebDriver intializedriver()
+	public static void main(String args[])
 	{
 		WebDriver driver=null;
 		WebDriverManager.chromedriver().setup();
 		driver= new ChromeDriver();
 		driver.manage().window().maximize();
-		driver.get(ConfigLoader.getInstance().getProperty("baseurl"));;
-		return driver;
+		driver.get("https://www.google.com/");
+		driver.close();
 	}
 	
-	
-	
-
 }
